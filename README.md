@@ -1,22 +1,13 @@
-# 📘 Welcome to the IS Project Documentation Template!
+# 📘 Welcome to the IS Project Documentation
 
-Hey there! 👋
-
-This repository is your home for documenting your **Innovation School Project** and starting your **maker portfolio**.  
-You’ll be using the **GitHub Wiki** to update all your project details in a structured format.
+This repository has the documentation for our **Innovation School Project** and starting our **maker portfolio**.  
+We’ll be using the **GitHub Wiki** to update all our project details in a structured format.
 
 ---
 
-## 🧠 What to Do First
+## 🧠 What is Our Project?
 
-Start by writing a **brief introduction** to your project right here in this `README.md` file:
-
-🔹 What problem are you solving?  
-🔹 What’s your proposed solution?
-
-Just 2–3 lines are enough. This helps others quickly understand what your project is about.
-
-Click on the ✏️ PENCIL icon next to the README title above, and you can edit the README directly from within your browser.
+This project addresses the problem of poor recycling habits caused by a lack of awareness and limited waste-sorting infrastructure. Our solution is an automatic waste-segregation system that uses object detection to identify different types of waste materials and ensure they are sorted correctly. By making recycling more efficient and accessible, the project helps reduce improper waste disposal and encourages more environmentally conscious daily behavior.
 
 ---
 
