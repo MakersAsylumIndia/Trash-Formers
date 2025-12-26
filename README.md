@@ -11,50 +11,21 @@ This project addresses the problem of poor recycling habits caused by a lack of 
 
 ---
 
-## 🛠 Where to Document Everything Else
+## 🛠 Where Everything Else is Documented
 
-We’ve already created a standard set of [**Wiki pages**](https://github.com/MakersAsylumIndia/Bowl-Buddy/wiki) for your project in this repository — you just need to **update them with your project information**.
+We’ve  crated a set of [**Wiki pages**] for our project in this repository which contains **all our project information**. It contains our:
 
-Each section is ready with headings like:
-
-- Project Title
 - Problem Statement
 - Bill of Materials (BOM)
 - Solution Overview
 - SDG Goals Associated
 - Circuit & CAD Files
+- Code Files
 - Media Gallery
+- Daily Summary / Process
 - License
 
-Please **do not delete the headings** — just replace the placeholder content under each.
-
 ---
-
-## 📚 How to Edit the GitHub Wiki Pages
-
-Follow these official GitHub help guides to learn how to edit your Wiki pages:
-
-🔗 [How to Add or Edit Wiki Pages](https://docs.github.com/en/communities/documenting-your-project-with-wikis/adding-or-editing-wiki-pages)  
-🔗 [How to Format and Save Content in Wikis](https://docs.github.com/en/communities/documenting-your-project-with-wikis/editing-wiki-content)
-
----
-
-## 📸 Visual Guide (Optional)
-
-If you’re unsure where the Wiki tab is:  
-📍 It’s on the top-right area of the repository (next to Code, Issues, Pull Requests).
-
-You’ll find your project listed there. Click on it, then click **“Edit”** to begin updating.
-
----
-
-## 🤝 Need Help?
-
-If you're confused at any step:
-- Ask your mentor or coordinator
-- Or drop a message in our Discord/WhatsApp support group
-
-Let’s build something awesome! 🚀
 
 ## License
 
@@ -75,6 +46,7 @@ MIT open source [license](http://opensource.org/licenses/MIT).
 
 ## 📬 Contact/Team
 
-> _List team members and contact emails or GitHub profiles._
+> [Makers Asylum](https://github.com/makersasylumindia)
+> 
 
 ---
