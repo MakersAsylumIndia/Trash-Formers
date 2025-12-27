@@ -1,3 +1,14 @@
+"""
+Integrated vision-based waste sorting system.
+
+Components:
+- YOLO object detection
+- Ultrasonic object triggering
+- Dual-servo actuation (movement + swipe)
+- Raspberry Pi GPIO control
+
+Status: Final-prototype
+"""
 import RPi.GPIO as GPIO
 import time
 import subprocess
