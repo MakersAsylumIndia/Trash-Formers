@@ -43,114 +43,104 @@ python
 ```bash
 cv2.VideoCapture(0)
 ```
-Common Errors
-arduino
-Copy code
-Cannot open camera
-No cameras available
-libcamera error
-Fix Checklist
-✅ Camera ribbon cable issue
-Power off Pi
+## 📷 Common Errors
 
-Reseat ribbon cable on both ends
+### Camera Errors
+- `Cannot open camera`
+- `No cameras available`
+- `libcamera error`
 
-Ensure metal contacts face the correct direction
+### Fix Checklist ✅
 
-Avoid bending or twisting the cable
+**Camera ribbon cable issue**
+- [ ] Power off Pi
+- [ ] Reseat ribbon cable on both ends
+- [ ] Ensure metal contacts face the correct direction
+- [ ] Avoid bending or twisting the cable
 
-✅ Enable camera support
-bash
-Copy code
+**Enable camera support**
+```bash
 sudo raspi-config
-Interface Options → Camera → Enable
-Then reboot:
-
-bash
-Copy code
+# Interface Options → Camera → Enable
 sudo reboot
-🟫 3. Cardboard Detection Behavior
-Project Design Choice
-Cardboard is part of the background inside the bin, so the code intentionally ignores it.
+```
 
-The detection logic filters out cardboard by:
+## 🟫 3. Cardboard Detection Logic (Important)
 
-Checking the detected class
+### Project Design Behavior
+Cardboard is frequently part of the **background inside the bin**.  
 
-Ignoring it instead of triggering a bin action
+To prevent false detections, the code applies this rule:
 
-This avoids false triggers whenever the camera sees the inside of the bin.
+- If cardboard is detected together with another class, the system **ignores the cardboard prediction** and processes only the other object.
 
-Symptoms (expected behavior)
-Cardboard objects are detected but no movement happens
+This ensures:
 
-System prints detection but skips servo motion
+- Background cardboard does **not trigger movement**
+- Only the **true object being dropped** is acted on
 
-This is correct according to the project design.
+### Expected Behavior
+- **If only cardboard appears** → cardboard/paper logic runs  
+- **If cardboard + plastic detected** → plastic logic runs  
+- **If cardboard + metal detected** → metal logic runs  
 
-🧠 4. Model Training Considerations
-If detection accuracy drops:
+> This behavior is intentional and part of the classification logic.
 
-Improve training dataset
-Add varied lighting conditions
+## 🧠 4. Model Training Considerations
 
-Include multiple material textures
+If detection accuracy drops, consider improving the training dataset:
 
-Use different angles and object distances
+- Add varied lighting conditions
+- Include multiple material textures
+- Use different angles and object distances
 
-Retraining helps with:
-Plastic reflections
+**Retraining helps with:**
 
-Transparent objects
+- Plastic reflections
+- Transparent objects
+- Low-confidence predictions
 
-Low-confidence predictions
+## 🧪 5. Debugging Detection Output
 
-🧪 5. Debugging Detection Output
 To understand model predictions, print detection results:
 
-python
-Copy code
+```python
 print(results[0].boxes.cls, results[0].boxes.conf)
+```
 This helps identify:
 
-Wrong class predictions
+- Wrong class predictions
+- Low confidence scores
+- Misclassified items
 
-Low confidence scores
+## 🧩 6. Ultrasonic Sensor Issues
 
-Misclassified items
+### Symptoms
+- Random distance readings
+- Timeout messages
+- Detection does not trigger
 
-🧩 6. Ultrasonic Sensor Issues
-Symptoms
-Random distance readings
+### Fix Checklist ✅
+- [ ] Confirm `TRIG` & `ECHO` pins match the code
+- [ ] Ensure stable 5V + GND connections
+- [ ] Keep wires short
+- [ ] Avoid routing wires near servos
+- [ ] Add a slight delay between measurements
 
-Timeout messages
+## 🛠 7. Debugging Test Scripts
 
-Detection does not trigger
-
-Fix Checklist
-Confirm TRIG & ECHO pins match the code
-
-Ensure stable 5V + GND connections
-
-Keep wires short
-
-Avoid routing wires near servos
-
-Add a slight delay between measurements
-
-🛠 7. Debugging Test Scripts
 Run individual test files to isolate issues:
 
-Servo Test (slow motion)
-bash
-Copy code
+### Servo Test (slow motion)
+```bash
 python check_servos.py
-Ultrasonic Sensor Test
-bash
-Copy code
+```
+### Ultrasonic Sensor Test
+```bash
 python test_ultrasonic.py
-Camera + Detection Test
-bash
-Copy code
+```
+### Camera + Detection Test
+```bash
 python detect_image.py
+```
 These scripts help confirm each module works before running the full system.
