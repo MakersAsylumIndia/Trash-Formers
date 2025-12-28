@@ -4,7 +4,7 @@ This guide covers common software-side issues with the Raspberry Pi, camera syst
 
 ---
 
-## ⚡ 1. Raspberry Pi Power Issues
+## 1. Raspberry Pi Power Issues
 
 ### **Symptoms**
 - Raspberry Pi reboots or freezes randomly  
@@ -26,7 +26,7 @@ Third-party adapters frequently cause undervoltage and system instability.
 
 ---
 
-## 📷 2. Camera & Library Issues
+## 2. Camera & Library Issues
 
 ### **Project Requirement**
 This project uses **RPICAM only**  
@@ -65,7 +65,7 @@ sudo raspi-config
 sudo reboot
 ```
 
-## 🟫 3. Cardboard Detection Logic (Important)
+## 3. Cardboard Detection Logic (Important)
 
 ### Project Design Behavior
 Cardboard is frequently part of the **background inside the bin**.  
@@ -86,7 +86,7 @@ This ensures:
 
 > This behavior is intentional and part of the classification logic.
 
-## 🧠 4. Model Training Considerations
+## 4. Model Training Considerations
 
 If detection accuracy drops, consider improving the training dataset:
 
@@ -100,7 +100,7 @@ If detection accuracy drops, consider improving the training dataset:
 - Transparent objects
 - Low-confidence predictions
 
-## 🧪 5. Debugging Detection Output
+## 5. Debugging Detection Output
 
 To understand model predictions, print detection results:
 
@@ -113,7 +113,7 @@ This helps identify:
 - Low confidence scores
 - Misclassified items
 
-## 🧩 6. Ultrasonic Sensor Issues
+## 6. Ultrasonic Sensor Issues
 
 ### Symptoms
 - Random distance readings
@@ -127,7 +127,7 @@ This helps identify:
 - [ ] Avoid routing wires near servos
 - [ ] Add a slight delay between measurements
 
-## 🛠 7. Debugging Test Scripts
+## 7. Debugging Test Scripts
 
 Run individual test files to isolate issues:
 
