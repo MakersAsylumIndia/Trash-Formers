@@ -10,6 +10,21 @@ We’ll be using the **GitHub Wiki** to update all our project details in a stru
 This project addresses the problem of poor recycling habits caused by a lack of awareness and limited waste-sorting infrastructure. Our solution is an automatic waste-segregation system that uses object detection to identify different types of waste materials and ensure they are sorted correctly. By making recycling more efficient and accessible, the project helps reduce improper waste disposal and encourages more environmentally conscious daily behavior.
 
 ---
+## Project Overview
+
+This project is a smart waste-sorting trash bin powered by a Raspberry Pi.
+
+It uses:
+an ultrasonic sensor to detect when an object is placed in the bin opening,
+a camera + YOLO object detection model to classify the material,
+and two servo motors to mechanically route the item into the correct bin compartment.
+
+Supported Material Categories / Bins
+The system sorts objects into three bins:
+Paper / Cardboard
+Plastic
+Metal
+___
 
 ## 🛠 Where Everything Else is Documented
 
