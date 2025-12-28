@@ -1,0 +1,36 @@
+## Components
+
+### Hardware
+- **Raspberry Pi 4 Model B**
+- **HC-SR04 Ultrasonic Sensor**
+- **Two Servo Motors**
+- **External 5V power supply** (for servos)
+- **Two solderless breadboards**
+- **Jumper wires**
+
+## Ultrasonic Sensor → Raspberry Pi (BCM GPIO)
+
+| HC-SR04 Pin | Raspberry Pi Pin |
+|------------|------------------|
+| VCC        | 5V               |
+| GND        | GND              |
+| TRIG       | GPIO 23          |
+| ECHO       | GPIO 24          |
+
+## Servo Motors  
+**(External 5V Supply Recommended)**
+
+| Servo Wire Color        | Connection                     |
+|-------------------------|--------------------------------|
+| Red                     | 5V external supply             |
+| Brown / Black           | GND (shared with Raspberry Pi) |
+| Orange / Yellow         | Control GPIO                   |
+
+### Recommended GPIO Mapping
+- **Swipe Servo** → GPIO 17  
+- **Movement Servo** → GPIO 27  
+
+## ⚠️ Important Power Notes
+
+> **Do NOT power servos from the Raspberry Pi 5V pin while under load.**  
+> Always use an **external 5V supply** and **share ground** between the Raspberry Pi and the servo power supply.
