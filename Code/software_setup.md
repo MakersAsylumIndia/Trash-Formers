@@ -28,9 +28,7 @@ Install the required system packages:
 ```bash
   sudo apt install -y \
   python3 python3-pip python3-venv \
-  python3-opencv \
-  libatlas-base-dev libopenblas-dev \
-  libjpeg-dev libtiff5
+  python3-rpi.gpio
 ```
 **4️⃣ Create a Python Virtual Environment
 Create and activate a virtual environment:
@@ -45,8 +43,7 @@ deactivate
 **5️⃣ Install Python Dependencies
 Upgrade pip and install the Python packages:
 ```bash
-pip install --upgrade pip
-pip install ultralytics pillow RPi.GPIO opencv-python
+pip install ultralytics pillow RPi.GPIO
 ```
 **6️⃣ Create Project Folders
 Create the necessary directories for models, images, and logs:
