@@ -73,7 +73,7 @@ Activate the virtual environment:
 source yolo-env/bin/activate
 ```
 
-```
+
 Run the main program:
 ```bash
 python smart_sort_detect.py
