@@ -25,7 +25,17 @@ The system sorts objects into **three bins**:
 - 📄 Paper / Cardboard  
 - 🧴 Plastic  
 - 🔩 Metal  
-___
+---
+
+## High-Level Workflow
+
+1. An object approaches the bin and the **ultrasonic sensor** detects its presence  
+2. The **camera captures an image** of the object  
+3. The **YOLO model** classifies the object  
+4. The **best detection** is mapped to one of the three supported bins  
+5. **Servo motors** position and swipe the item into the correct bin  
+
+---
 
 ## 🛠 Where Everything Else is Documented
 
