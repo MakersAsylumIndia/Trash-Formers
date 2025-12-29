@@ -42,6 +42,7 @@ Take a photo
 rpicam-still -o image.jpg
 ```
 If test.jpg is created, your camera is functioning correctly.
+
 ---
 
 **Install System Packages**
