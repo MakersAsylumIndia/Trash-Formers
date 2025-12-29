@@ -25,6 +25,7 @@ sudo apt upgrade -y
 ---
 
 **Enable/Test the Camera**
+
 Install the rpicam apps:
 ```bash
 sudo apt install -y rpicam-apps
