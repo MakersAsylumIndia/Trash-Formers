@@ -4,7 +4,7 @@ This guide explains how to set up the **Raspberry Pi software environment**, ins
 **Note:** This covers **software only** — hardware wiring is documented separately.
 
 ---
-**Connecting to the Pi**
+**Connecting to the Raspberry Pi**
 1. Ensure that your computer and the Raspberry Pi are connected to the same network.
 2. Find the IP address of the Raspberry Pi:
    ```bash
@@ -15,16 +15,16 @@ This guide explains how to set up the **Raspberry Pi software environment**, ins
    ```bash
    ssh pi@<PI_IP_ADDRESS>
    ```
-
-**1️⃣ Update the Raspberry Pi**  
+**Update the Raspberry Pi**  
 Open a terminal and run:
 
 ```bash
 sudo apt update
 sudo apt upgrade -y
 ```
+---
 
-**2️⃣ Enable the Camera**
+**Enable/Test the Camera**
 Install the rpicam apps:
 ```bash
 sudo apt install -y rpicam-apps
@@ -41,8 +41,10 @@ Take a photo
 ```bash
 rpicam-still -o image.jpg
 ```
+If test.jpg is created, your camera is functioning correctly.
+---
 
-**3️⃣ Install System Packages**
+**Install System Packages**
 Install the required system packages:
 ```bash
   sudo apt install -y
@@ -50,7 +52,7 @@ Install the required system packages:
   sudo apt install python3-rpi.gpio
 ```
 
-**4️⃣ Create a Python Virtual Environment**
+**Create a Python Virtual Environment**
 Create and activate a virtual environment:
 ```bash
 python3 -m venv yolo-env
@@ -61,13 +63,14 @@ To exit the environment later:
 deactivate
 ```
 
-**5️⃣ Install Python Dependencies**
+**Install Python Dependencies**
 Upgrade pip and install the Python packages:
 ```bash
 pip install ultralytics pillow RPi.GPIO
 ```
+---
 
-**6️⃣ Create Project Folders**
+**Create Project Folders**
 Create the necessary directories for models, images, and logs:
 ```bash
 mkdir -p models images logs
@@ -77,21 +80,13 @@ Place your YOLO model in the models folder:
 models/my_model.pt
 ```
 
-**7️⃣ Test the Camera**
-Capture a test image to verify the camera works:
-```bash
-rpicam-still -o test.jpg
-```
-If test.jpg is created, your camera is functioning correctly.
-
-**8️⃣ Run the Project**
+**Run the Project**
 Activate the virtual environment:
 ```bash
 source yolo-env/bin/activate
 ```
-
-
 Run the main program:
 ```bash
 python smart_sort_detect.py
 ```
+---
