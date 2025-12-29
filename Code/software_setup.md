@@ -4,6 +4,17 @@ This guide explains how to set up the **Raspberry Pi software environment**, ins
 **Note:** This covers **software only** — hardware wiring is documented separately.
 
 ---
+**Connecting to the Pi**
+1. Ensure that your computer and the Raspberry Pi are connected to the same network.
+2. Find the IP address of the Raspberry Pi:
+   ```bash
+   arp -a
+   ```
+   Look for a device that matches the Raspberry Pi’s hostname or MAC address.
+3. Connect to the Raspberry Pi using SSH:
+   ```bash
+   ssh pi@<PI_IP_ADDRESS>
+   ```
 
 **1️⃣ Update the Raspberry Pi**  
 Open a terminal and run:
@@ -14,15 +25,21 @@ sudo apt upgrade -y
 ```
 
 **2️⃣ Enable the Camera**
-Run the Raspberry Pi configuration tool:
+Install the rpicam apps:
 ```bash
-sudo raspi-config
+sudo apt install -y rpicam-apps
 ```
-Navigate to:
-Interface Options → Camera → Enable
-Then reboot the Pi:
+Verify camera is detected
 ```bash
-sudo reboot
+rpicam-hello --list-cameras
+```
+Camera preview
+```bash
+rpicam-hello
+```
+Take a photo
+```bash
+rpicam-still -o image.jpg
 ```
 
 **3️⃣ Install System Packages**
