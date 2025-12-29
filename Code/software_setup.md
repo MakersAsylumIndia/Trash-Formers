@@ -40,7 +40,7 @@ rpicam-hello
 ```
 Take a photo
 ```bash
-rpicam-still -o image.jpg
+rpicam-still -o test.jpg
 ```
 If test.jpg is created, your camera is functioning correctly.
 
