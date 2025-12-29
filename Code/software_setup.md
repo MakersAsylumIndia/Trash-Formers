@@ -45,8 +45,8 @@ rpicam-still -o image.jpg
 **3️⃣ Install System Packages**
 Install the required system packages:
 ```bash
-  sudo apt install -y \
-  python3 python3-pip python3-venv \
+  sudo apt install -y
+  python3 python3-pip python3-venv
   python3-rpi.gpio
 ```
 
